@@ -216,7 +216,7 @@ function click_revegetate () {
    }
 			 }
 
-			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'veg\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].rain + '</p>' + starimg + '</li>'
+			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'veg\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].count + '</p>' + starimg + '</li>'
     }
     if (typeof data.region !== 'undefined' && data.region != '') {
       $('.region-name-header').html(' - ' + data.region)
@@ -246,7 +246,7 @@ function click_landscape_myplant () {
 
 			 var starimg = '<img class="fav-icon-list" src="img/app_icons/star_on.png" onclick="remove_ls_list_myplant(\'' + ls_fav_list[i].scientificName + '\',this)"/>'
 
-			 str += '<li onclick="open_detail(\'' + ls_fav_list[i].scientificName + '\',\'fav\',\'ls\')">' + formimg + '<h3>' + ls_fav_list[i].scientificName + '</h3><p>' + ls_fav_list[i].commonName + ' - Occurences: ' + ls_fav_list.rain + '</p>' + starimg + '</li>'
+			 str += '<li onclick="open_detail(\'' + ls_fav_list[i].scientificName + '\',\'fav\',\'ls\')">' + formimg + '<h3>' + ls_fav_list[i].scientificName + '</h3><p>' + ls_fav_list[i].commonName + ' - Occurences: ' + ls_fav_list.count + '</p>' + starimg + '</li>'
   }
 
   $('#my-plan-list-list').html(str)
@@ -310,7 +310,7 @@ function click_revegetate_myplant () {
 
 			 var starimg = '<img class="fav-icon-list" src="img/app_icons/star_on.png" onclick="remove_veg_list_myplant(\'' + veg_fav_list[i].scientificName + '\',this)"/>'
 
-			 str += '<li onclick="open_detail(\'' + veg_fav_list[i].scientificName + '\',\'fav\',\'veg\')">' + formimg + '<h3>' + veg_fav_list[i].scientificName + '</h3><p>' + veg_fav_list[i].commonName + ' - Occurences: ' + veg_fav_list.rain + '</p>' + starimg + '</li>'
+			 str += '<li onclick="open_detail(\'' + veg_fav_list[i].scientificName + '\',\'fav\',\'veg\')">' + formimg + '<h3>' + veg_fav_list[i].scientificName + '</h3><p>' + veg_fav_list[i].commonName + ' - Occurences: ' + veg_fav_list.count + '</p>' + starimg + '</li>'
   }
   $('#my-area-plant-info').html('Your location area will need ' + veg_plant_needed + ' plants from the following options. You will need a ratio of 1 tree to 2 shrubs to 4 groundcorvers.')
   $('#my-area-plan-list-list').html(str)
@@ -384,7 +384,7 @@ function search_plant () {
    }
 			 }
 
-			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'ls\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].rain + '</p>' + starimg + '</li>'
+			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'ls\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].count + '</p>' + starimg + '</li>'
   }
   if (typeof data.region !== 'undefined' && data.region != '') {
     $('.region-name-header').html(' - ' + data.region)
