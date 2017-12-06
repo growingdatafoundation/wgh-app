@@ -179,7 +179,7 @@ function click_landscape () {
 			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'ls\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + occurrences + '</p>' + starimg + '</li>'
     }
     if (typeof data.region !== 'undefined' && data.region != '') {
-      $('.region-name-header').html(' - ' + data.region)
+      $('.region-name-header').html(' - ' + data.region.name + ' - ' + data.region.regionName + ' - ' + data.region.state)
       myregion = data.region
     }
     $('#ls-plant-list').html(str)
@@ -219,7 +219,7 @@ function click_revegetate () {
 			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'veg\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].count + '</p>' + starimg + '</li>'
     }
     if (typeof data.region !== 'undefined' && data.region != '') {
-      $('.region-name-header').html(' - ' + data.region)
+      $('.region-name-header').html(' - ' + data.region.name + ' - ' + data.region.regionName + ' - ' + data.region.state)
       myregion = data.region
     }
     $('#veg-plant-list').html(str)
@@ -387,7 +387,7 @@ function search_plant () {
 			 str += '<li onclick="open_detail(\'' + data.plants[i].scientificName + '\',\'list\',\'ls\')">' + formimg + '<h3>' + data.plants[i].scientificName + '</h3><p>' + data.plants[i].commonName + ' - Occurences: ' + data.plants[i].count + '</p>' + starimg + '</li>'
   }
   if (typeof data.region !== 'undefined' && data.region != '') {
-    $('.region-name-header').html(' - ' + data.region)
+    $('.region-name-header').html(' - ' + data.region.name + ' - ' + data.region.regionName + ' - ' + data.region.state)
   }
   $('#ls-plant-list').html(str)
 
