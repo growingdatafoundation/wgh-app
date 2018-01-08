@@ -180,7 +180,7 @@ function click_landscape () {
     }
     if (typeof data.region !== 'undefined' && data.region != '') {
       $('.region-name-header').html(' - ' + data.region.name + ' - ' + data.region.regionName + ' - ' + data.region.state)
-      myregion = data.region
+      myregion = data.region.name
     }
     $('#ls-plant-list').html(str)
 
